@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexaWeb Studio | Professional Websites</title>
+<meta name="description" content="NexaWeb Studio creates professional, mobile-friendly websites for small businesses and entrepreneurs in Nigeria.">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;color:#17141a;background:#fbf9fc;line-height:1.6}
+header{background:#17141a;color:#fff;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+.logo{font-size:23px;font-weight:800;letter-spacing:.3px}
+nav a{color:#fff;text-decoration:none;margin-left:22px;font-size:14px}
+.hero{padding:95px 7%;background:linear-gradient(120deg,#f2eaff,#f8f0ff)}
+.hero-content{max-width:780px}
+.badge{display:inline-block;padding:8px 14px;border-radius:20px;background:#fff;font-size:13px;font-weight:bold;margin-bottom:20px}
+.hero h1{font-size:clamp(42px,7vw,76px);line-height:1.02;margin:0 0 20px}
+.hero p{font-size:19px;max-width:650px;margin-bottom:28px}
+.btn{display:inline-block;padding:14px 24px;border-radius:28px;background:#17141a;color:#fff;text-decoration:none;font-weight:bold;margin:5px}
+.btn.alt{background:#fff;color:#17141a;border:1px solid #17141a}
+section{padding:72px 7%}
+.title{text-align:center;margin-bottom:40px}
+.title h2{font-size:35px;margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:#fff;padding:27px;border-radius:18px;box-shadow:0 6px 25px #0000000d}
+.icon{font-size:30px}
+.card h3{margin:12px 0 8px}
+.price{font-size:27px;font-weight:800;margin:15px 0}
+.portfolio-card{min-height:220px;padding:28px;border-radius:18px;background:linear-gradient(135deg,#251b30,#765b82);color:#fff;display:flex;flex-direction:column;justify-content:flex-end}
+.portfolio-card a{color:#fff;font-weight:bold}
+.dark{background:#17141a;color:#fff}
+.dark .card{color:#17141a}
+.steps{counter-reset:step}
+.step{position:relative;padding-left:65px}
+.step:before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:43px;height:43px;border-radius:50%;background:#17141a;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:bold}
+form{max-width:650px;margin:auto;background:#fff;padding:28px;border-radius:18px;box-shadow:0 6px 25px #0000000d}
+label{font-weight:bold;font-size:14px}
+input,select,textarea{width:100%;padding:13px;margin:7px 0 15px;border:1px solid #ddd;border-radius:9px;font:inherit}
+button{width:100%;padding:14px;border:0;border-radius:28px;background:#17141a;color:#fff;font-weight:bold;font-size:16px;cursor:pointer}
+.contact{text-align:center}
+.contact p{margin:8px}
+footer{background:#0f0d10;color:#fff;text-align:center;padding:30px}
+.small{font-size:13px;opacity:.75}
+@media(max-width:650px){nav{display:none}.hero{padding-top:70px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">NexaWeb Studio</div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="badge">Web Design • Ado-Ekiti, Nigeria</div>
+    <h1>Your Business. Your Website. Your Growth.</h1>
+    <p>NexaWeb Studio creates clean, professional and mobile-friendly websites that help small businesses look credible online and make it easier for customers to contact them.</p>
+    <a class="btn" href="#contact">Start Your Website</a>
+    <a class="btn alt" href="#portfolio">See My Work</a>
+  </div>
+</section>
+
+<section id="services">
+  <div class="title">
+    <h2>What I Can Build For You</h2>
+    <p>Simple websites designed around your business goals.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="icon">💼</div><h3>Business Websites</h3><p>Professional websites that introduce your business and make it easy for customers to reach you.</p></div>
+    <div class="card"><div class="icon">💇</div><h3>Salon Websites</h3><p>Show services, prices, hairstyle photos and allow customers to book through WhatsApp.</p></div>
+    <div class="card"><div class="icon">👗</div><h3>Fashion & Online Stores</h3><p>Showcase products, prices and ordering information in one place.</p></div>
+    <div class="card"><div class="icon">📱</div><h3>Mobile-Friendly Design</h3><p>Websites that look good and work properly on phones, tablets and computers.</p></div>
+    <div class="card"><div class="icon">📅</div><h3>Booking Websites</h3><p>Help customers request appointments and send booking details directly to WhatsApp.</p></div>
+    <div class="card"><div class="icon">🔧</div><h3>Website Updates</h3><p>Need new prices, photos or services added? I can keep your website updated.</p></div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="title">
+    <h2>My Portfolio</h2>
+    <p>Examples of websites I can create for businesses.</p>
+  </div>
+  <div class="grid">
+    <div class="portfolio-card"><h3>Salon Website</h3><p>Services • Prices • Gallery • WhatsApp Booking</p><a href="salon-demo.html">View Demo →</a></div>
+    <div class="portfolio-card"><h3>Food Business Website</h3><p>Menu • Products • Contact • Orders</p><span>Coming Soon →</span></div>
+    <div class="portfolio-card"><h3>Fashion Business Website</h3><p>Products • Gallery • Social Media • Contact</p><span>Coming Soon →</span></div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="title">
+    <h2>How It Works</h2>
+    <p>Getting your website started is simple.</p>
+  </div>
+  <div class="grid steps">
+    <div class="card step"><h3>Tell Me About Your Business</h3><p>Send your business name, services, photos, prices and contact details.</p></div>
+    <div class="card step"><h3>I Build Your Website</h3><p>I organize the information into a professional website designed for your customers.</p></div>
+    <div class="card step"><h3>You Review It</h3><p>You check the website and request any changes you want.</p></div>
+    <div class="card step"><h3>Go Online</h3><p>Once everything is ready, your website can be published with your own web address.</p></div>
+  </div>
+</section>
+
+<section style="padding-top:0;padding-bottom:25px;">
+  <div class="card" style="text-align:center;background:#f2eaff;">
+    <h3>🔥 Launch Offer</h3>
+    <p>Get your business online with a professional website and WhatsApp contact system.</p>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="title">
+    <h2>Website Packages</h2>
+    <p>Affordable packages for growing Nigerian businesses.</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <h3>Starter</h3>
+      <p>Perfect for a small business that needs a professional online presence.</p>
+      <div class="price">₦35,000</div>
+      <p>✓ One-page website<br>✓ Business information<br>✓ WhatsApp button<br>✓ Contact details<br>✓ Mobile-friendly design<br>✓ 1 revision</p>
+      <a class="btn" href="#contact">Choose Starter</a>
+    </div>
+
+    <div class="card">
+      <h3>Business</h3>
+      <p>Best for salons, fashion brands, food businesses and service providers.</p>
+      <div class="price">₦65,000</div>
+      <p>✓ Professional multi-section website<br>✓ Services/products & prices<br>✓ Photo gallery<br>✓ WhatsApp inquiry/booking<br>✓ Contact section<br>✓ Mobile-friendly design<br>✓ 2 revisions</p>
+      <a class="btn" href="#contact">Choose Business</a>
+    </div>
+
+    <div class="card">
+      <h3>Premium</h3>
+      <p>For businesses that want a stronger online presence and more features.</p>
+      <div class="price">₦100,000+</div>
+      <p>✓ Custom website design<br>✓ Multiple pages<br>✓ Booking/order features<br>✓ Gallery & social links<br>✓ Custom sections<br>✓ Launch support<br>✓ 3 revisions</p>
+      <a class="btn" href="#contact">Choose Premium</a>
+    </div>
+  </div>
+  <p class="small" style="text-align:center;margin-top:25px;color:#555;">
+    *Domain, hosting and third-party services are priced separately when required.
+  </p>
+</section>
+
+<section id="contact">
+  <div class="title">
+    <h2>Let's Build Your Website</h2>
+    <p>Tell me what you need and I'll get back to you.</p>
+  </div>
+  <form onsubmit="sendWhatsApp(event)">
+    <label>Your Name</label>
+    <input id="name" required placeholder="Enter your name">
+    <label>Business Name</label>
+    <input id="business" required placeholder="Enter your business name">
+    <label>What type of website do you need?</label>
+    <select id="type">
+      <option>Business website</option>
+      <option>Salon / Hairdresser website</option>
+      <option>Fashion website</option>
+      <option>Food business website</option>
+      <option>Portfolio website</option>
+      <option>Other</option>
+    </select>
+    <label>Your message</label>
+    <textarea id="message" rows="5" placeholder="Tell me what you want your website to do"></textarea>
+    <button type="submit">Send Request on WhatsApp</button>
+  </form>
+</section>
+
+<section class="contact">
+  <h2>NexaWeb Studio</h2>
+  <p>📍 Ado-Ekiti, Ekiti State, Nigeria</p>
+  <p>📱 WhatsApp: 09038822389</p>
+  <p>💻 Professional websites for growing businesses</p>
+</section>
+
+<footer>
+  <strong>NexaWeb Studio</strong>
+  <p class="small">Your Business. Your Website. Your Growth.</p>
+  <p class="small">© 2026 NexaWeb Studio. All rights reserved.</p>
+</footer>
+
+<script>
+function sendWhatsApp(e){
+  e.preventDefault();
+  const number="2349038822389";
+  const n=document.getElementById("name").value;
+  const b=document.getElementById("business").value;
+  const t=document.getElementById("type").value;
+  const m=document.getElementById("message").value;
+  const text=`Hello NexaWeb Studio!%0A%0AName: ${encodeURIComponent(n)}%0ABusiness: ${encodeURIComponent(b)}%0AWebsite type: ${encodeURIComponent(t)}%0AMessage: ${encodeURIComponent(m)}`;
+  window.open(`https://wa.me/${number}?text=${text}`,"_blank");
+}
+</script>
+</body>
+</html>

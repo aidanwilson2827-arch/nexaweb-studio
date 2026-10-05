@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thomas Web Studio | Salon Website Demo</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#251b20;background:#fff9fb}header{background:#251b20;color:#fff;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:5}.logo{font-size:21px;font-weight:700}nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:14px}.hero{padding:90px 7%;background:linear-gradient(120deg,#fff0f5,#f4dce7)}.hero h1{font-size:clamp(42px,7vw,72px);max-width:750px;line-height:1.02;margin:0 0 18px}.hero p{font-size:18px;max-width:650px}.btn{display:inline-block;margin-top:18px;padding:14px 24px;border-radius:28px;background:#251b20;color:#fff;text-decoration:none;font-weight:bold}section{padding:65px 7%}.title{text-align:center;margin-bottom:35px}.title h2{font-size:34px;margin-bottom:6px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}.card{background:#fff;padding:24px;border-radius:17px;box-shadow:0 5px 22px #0000000c}.price{font-weight:bold;font-size:19px;margin-top:12px}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px}.gallery img{width:100%;height:230px;object-fit:cover;border-radius:16px;background:#ead4dd}.dark{background:#251b20;color:#fff}.dark .card{color:#251b20}form{max-width:650px;margin:auto;background:#fff;padding:25px;border-radius:17px}input,select,textarea{width:100%;padding:13px;margin:7px 0 14px;border:1px solid #ddd;border-radius:8px;font:inherit}button{width:100%;padding:14px;border:0;border-radius:25px;background:#251b20;color:#fff;font-weight:bold;cursor:pointer}.portfolio{font-size:13px;text-align:center;padding:10px;background:#f3e5eb}footer{text-align:center;background:#171116;color:#fff;padding:28px}@media(max-width:650px){nav{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo" id="brand">Thomas Web Studio</div>
+<nav><a href="#services">Services</a><a href="#work">Work</a><a href="#booking">Booking</a><a href="#contact">Contact</a></nav>
+</header>
+
+<div class="portfolio">Website demo created by <b id="studio">Thomas Web Studio</b></div>
+
+<section class="hero">
+<h1 id="salonName">Bella Touch Hair Salon</h1>
+<p id="tagline">Beautiful hair. Confident you. Professional styling, braids, wigs and hair care.</p>
+<a class="btn" href="#booking">Book Appointment</a>
+</section>
+
+<section id="services">
+<div class="title"><h2>Our Services</h2><p>Choose your perfect look.</p></div>
+<div class="grid" id="serviceList"></div>
+</section>
+
+<section id="work">
+<div class="title"><h2>Our Work</h2><p>Replace these demo photos with your client's real work.</p></div>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=700&q=80" alt="Hair style">
+<img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=700&q=80" alt="Hair style">
+<img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=700&q=80" alt="Hair style">
+<img src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&w=700&q=80" alt="Hair style">
+</div>
+</section>
+
+<section class="dark">
+<div class="title"><h2>Why Choose Us?</h2></div>
+<div class="grid">
+<div class="card"><h3>Professional</h3><p>Beautiful finishing and attention to detail.</p></div>
+<div class="card"><h3>Customer First</h3><p>We listen to what you want and help you choose the right style.</p></div>
+<div class="card"><h3>Easy Booking</h3><p>Quick appointment booking through WhatsApp.</p></div>
+</div>
+</section>
+
+<section id="booking">
+<div class="title"><h2>Book an Appointment</h2><p>Send your booking directly to WhatsApp.</p></div>
+<form onsubmit="book(event)">
+<label>Name</label><input id="name" required>
+<label>Phone</label><input id="phone" required>
+<label>Service</label><select id="serviceSelect"></select>
+<label>Preferred date</label><input id="date" type="date" required>
+<label>Message</label><textarea id="message" rows="4"></textarea>
+<button type="submit">Book via WhatsApp</button>
+</form>
+</section>
+
+<section id="contact">
+<div class="title">
+<h2>Contact Us</h2>
+<p id="address"></p><p id="phoneDisplay"></p><p id="instagram"></p><p id="hours"></p>
+</div>
+</section>
+
+<footer>© 2026 <span id="footerName">Thomas Web Studio</span>. Website template by Thomas Web Studio.</footer>
+
+<script>
+/* =========================================================
+   EASY CUSTOMIZATION AREA
+   Change ONLY the values inside this section for each client.
+   ========================================================= */
+const WEBSITE = {
+  yourStudioName: "Thomas Web Studio",
+  salonName: "Bella Touch Hair Salon",
+  tagline: "Beautiful hair. Confident you. Professional styling, braids, wigs and hair care.",
+  whatsapp: "2348012345678", // use country code, no + sign
+  phone: "0801 234 5678",
+  address: "24 Allen Avenue, Ikeja, Lagos, Nigeria",
+  instagram: "@bellatouchhair",
+  hours: "Mon–Sat: 9:00 AM – 7:00 PM",
+  services: [
+    ["Knotless Braids", "Neat, stylish and comfortable braids.", "₦25,000"],
+    ["Wig Installation", "Clean and professional wig installation.", "₦15,000"],
+    ["Natural Hair Styling", "Healthy styling for natural hair.", "₦10,000"],
+    ["Hair Treatment", "Give your hair the care it deserves.", "₦8,000"]
+  ]
+};
+/* ========================================================= */
+
+document.getElementById("brand").textContent=WEBSITE.yourStudioName;
+document.getElementById("studio").textContent=WEBSITE.yourStudioName;
+document.getElementById("salonName").textContent=WEBSITE.salonName;
+document.getElementById("tagline").textContent=WEBSITE.tagline;
+document.getElementById("address").textContent="📍 "+WEBSITE.address;
+document.getElementById("phoneDisplay").textContent="📞 "+WEBSITE.phone;
+document.getElementById("instagram").textContent="Instagram: "+WEBSITE.instagram;
+document.getElementById("hours").textContent=WEBSITE.hours;
+document.getElementById("footerName").textContent=WEBSITE.yourStudioName;
+
+const list=document.getElementById("serviceList"), select=document.getElementById("serviceSelect");
+WEBSITE.services.forEach(s=>{
+  list.innerHTML += `<div class="card"><h3>${s[0]}</h3><p>${s[1]}</p><div class="price">${s[2]}</div></div>`;
+  select.innerHTML += `<option>${s[0]}</option>`;
+});
+
+function book(e){
+ e.preventDefault();
+ const text=`Hello ${WEBSITE.salonName}, I would like to book an appointment.%0A%0AName: ${encodeURIComponent(name.value)}%0APhone: ${encodeURIComponent(phone.value)}%0AService: ${encodeURIComponent(serviceSelect.value)}%0ADate: ${encodeURIComponent(date.value)}%0AMessage: ${encodeURIComponent(message.value)}`;
+ window.open(`https://wa.me/${WEBSITE.whatsapp}?text=${text}`,"_blank");
+}
+</script>
+</body>
+</html>
